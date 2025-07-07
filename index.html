@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Speed Test Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="light">
+  <div class="container">
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <h1>Typing Speed Test </h1>
+    
+    <div class="text-display" id="textDisplay"></div>
+
+    <label for="customText">Enter custom passage (optional):</label>
+    <input type="text" id="customText" placeholder="Paste your own paragraph here...">
+
+    <textarea id="inputArea" placeholder="Start typing here..." disabled></textarea>
+
+    <div class="stats">
+      <div>WPM: <span id="wpm">0</span></div>
+      <div>Accuracy: <span id="accuracy">100</span>%</div>
+      <div>Time: <span id="time">0</span>s</div>
+    </div>
+
+    <div class="controls">
+      <button onclick="startTest()">Start</button>
+      <button onclick="resetTest()">Reset</button>
+    </div>
+
+    <div class="history">
+  <h3>Previous Scores</h3>
+  <ul id="scoreHistory"></ul>
+  <button onclick="clearHistory()">Clear Previous Scores</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
